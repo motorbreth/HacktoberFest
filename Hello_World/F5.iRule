@@ -1,0 +1,6 @@
+when HTTP_REQUEST {
+        if { [HTTP::uri] eq "/mytest" } {
+                set response "Hello World"
+                HTTP::respond 200 content $response "Content-Type" "text/xml"
+           }
+}
